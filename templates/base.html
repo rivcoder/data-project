@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Health360{% endblock %}</title>
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #f5f7fa; color: #1f2937; }
+    nav { background: #0f4c81; padding: 14px 24px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    nav a { color: #fff; text-decoration: none; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    nav .brand { font-weight: 700; font-size: 1.1rem; margin-right: 12px; }
+    main { max-width: 1280px; margin: 24px auto; padding: 0 16px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+    .card a { color: #0f4c81; font-weight: 600; text-decoration: none; }
+    .card p { color: #6b7280; font-size: .9rem; }
+    tableau-viz { width: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="brand">Health360</span>
+    <a href="/">Home</a>
+    {% for key, d in dashboards.items() %}
+      <a href="/dashboard/{{ key }}">{{ d.title }}</a>
+    {% endfor %}
+    <a href="/story">Story</a>
+  </nav>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
