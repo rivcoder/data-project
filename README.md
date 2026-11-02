@@ -10,8 +10,6 @@ An interactive Tableau analytics project that helps healthcare teams spot high-r
 | | |
 |---|---|
 | Tableau Public Story | https://public.tableau.com/app/profile/rashika.jain8238/viz/Book1_17931080330870/Story1 |
-| Demo video | _add link here_ |
-
 ## Problem Statement
 
 Chronic diseases such as heart disease, diabetes and stroke are often detected late, which raises treatment costs and worsens outcomes. Manual review of patient records makes it hard to see patterns quickly. This project turns patient data into interactive dashboards so clinicians, analysts and public health researchers can identify vulnerable groups and act earlier.
